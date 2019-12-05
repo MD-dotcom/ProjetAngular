@@ -1,0 +1,8 @@
+<form (ngSubmit)="onSubmit()" #inscriptionForm="ngForm" >
+              <label> Keyword </label>
+              <input type="text" class="form-control" required [(ngModel)]="utilisateur['keyword']" name= "keyword" />
+            
+              <input type="submit" value=" recherche "/>
+            
+            </form>
+            

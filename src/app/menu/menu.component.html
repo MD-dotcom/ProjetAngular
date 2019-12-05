@@ -1,0 +1,45 @@
+<nav class="navbar navbar-dark bg-dark navbar-fixed-top navbar-expand">
+    <div class="container-fluid"> <!--jusqu'au la des styles bootstrap-->
+        <ul *ngIf="!(user|async)" class="navbar-nav"> <!--pour que le user va se mettre a jour auto-->
+            <li class="nav-item">
+                <a class="nav-link active" routerLink="/membres/connexion"> Se connecter</a>
+               <!-- <a class="nav-link active" routerLink="/ajouter-user"> s'inscrire </a> -->
+            </li>
+            <!--<ul *ngIf="!(user|async)" class="navbar-nav"> pour que le user va se mettre a jour auto
+            
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/ajouter-user"> s'inscrire </a>
+                        <a class="nav-link active" routerLink="/ajouter-user"> s'inscrire </a> 
+                </li> -->
+
+            <li class="nav-item">
+                <a class="nav-link disable" routerLink="/membres/connexion"> Liste des produits </a>
+                <a class="nav-link active" routerLink="/ajouter-user"> s'inscrire </a>  
+                     
+            </li> 
+        </ul>
+        <ul *ngIf="user|async" class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" routerLink="/produits"> Liste des produits</a>
+               
+            </li>
+           
+            
+            <li class="nav-item">
+                <a class="nav-link active" (click)="deconnexion()"> Deconnection de {{ user|async }}</a>  
+            </li> 
+
+        </ul> 
+    </div>
+</nav>
+<nav>
+
+               
+        <a [routerLink] ="['/recherche']"> Recherche </a>       
+      <!--  <a [routerLink] ="['/produits/keywords?cafeine']"> Recherche </a> <br/> -->
+            
+        
+
+
+</nav>
+<router-outlet></router-outlet>

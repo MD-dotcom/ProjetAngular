@@ -1,0 +1,25 @@
+
+<h1> Inscription </h1>
+<form (ngSubmit)="valider()"  #inscriptionForm="ngForm">
+    <label> nom </label>
+    <input type="text" class="form-control" required [(ngModel)]="nom" name= "nom" />
+
+    <label> prenom </label>
+    <input type="text" class="form-control" required [(ngModel)]="prenom" name= "prenom" />
+
+    <label> email </label>
+    <input type="text" class="form-control" required [(ngModel)]="email" name= "email" />
+  
+    <label >mot de passe </label>
+    <input type="password" class="form-control" required
+           [(ngModel)]="password" name="password" />
+
+    <label > confirmer mot de passe </label>
+    <input type="password" class="form-control" required
+           [(ngModel)]="confirmationPassword" name="confirmerPassword" />
+    <input type="submit"  value=" valider "/>
+  
+  
+  </form>
+
+  

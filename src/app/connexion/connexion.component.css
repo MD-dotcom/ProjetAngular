@@ -1,0 +1,21 @@
+.form
+{   
+    display: flex;
+    flex-direction: column;
+
+}
+
+.champ{
+    display: flex;
+    justify-content:space-around;
+
+}
+
+.first
+{
+    display: flex;
+    justify-content:space-around;
+    color:#000099;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+}
